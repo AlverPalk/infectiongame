@@ -49,7 +49,7 @@ var Person = (function () {
         this.keepDistance();
         for (var i = 0; i < GC.people.length; i++) {
             var dist = distance(GC.mouse.x, GC.mouse.y, GC.people[i].x, GC.people[i].y)
-                - 4 * this.radius;
+                - 8 * this.radius;
             if (dist <= 0) {
                 GC.people[i].x += (GC.mouse.x > GC.people[i].x + this.radius) ? -1 : 1;
                 GC.people[i].y += (GC.mouse.y > GC.people[i].y + this.radius) ? -1 : 1;
