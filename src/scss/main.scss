@@ -1,3 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
+
+$main-font__color: rgb(233, 233, 233);
+$main-font__color--lighter: rgba(233, 233, 233, .5);
+
 * {
   box-sizing: border-box;
 }
@@ -5,12 +10,128 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 canvas {
-  border: 1px solid gray;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 10px 1px #afafaf;
+}
+
+#menu {
+  background-image: url('../img/bg.png');
+  background-position-x: 700px;
+  height: 800px;
+  width: 1300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 100px;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 3em;
+      text-transform: uppercase;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      margin: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+      border: 0;
+      box-shadow: none;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, .5);
+      color: $main-font__color;
+
+      &::-moz-focus-inner {
+        border: 0;
+      }
+
+      &:hover {
+        transition: .2s all;
+        background-color: rgba(0, 0, 0, .7);
+      }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+      color: gray;
+    }
+  }
+
+  &-end {
+    background-color: rgba(0, 0, 0, .9);
+    width: 800px;
+    height: 500px;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    color: $main-font__color;
+    display: none;
+
+    h1 {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin: 5px;
+      &:first-of-type {
+        color: $main-font__color--lighter;
+      }
+
+      &:last-of-type {
+        font-size: 2em;
+      }
+    }
+
+    button {
+      border: none;
+      box-shadow: none;
+      padding: 26px;
+      position: absolute;
+      bottom: 80px;
+      right: 50px;
+      width: 400px;
+      background-color: rgba(0, 0, 0, .5);
+      color: $main-font__color;
+      transition: .2s all;
+      outline: 0;
+      font-size: .8em;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, .9);
+        transition: .2s all;
+      }
+
+      &::-moz-focus-inner {
+        border: 0;
+      }
+    }
+  }
 }

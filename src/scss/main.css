@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
 * {
   box-sizing: border-box;
 }
@@ -5,14 +6,115 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 canvas {
-  border: 1px solid gray;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 10px 1px #afafaf;
+}
+
+#menu {
+  background-image: url("../img/bg.png");
+  background-position-x: 700px;
+  height: 800px;
+  width: 1300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 100px;
+}
+#menu section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#menu section h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+#menu section div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px;
+}
+#menu section button {
+  margin-top: 10px;
+  border: 0;
+  box-shadow: none;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #e9e9e9;
+}
+#menu section button::-moz-focus-inner {
+  border: 0;
+}
+#menu section button:hover {
+  transition: 0.2s all;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#menu section input::-webkit-outer-spin-button,
+#menu section input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#menu section input[type=number] {
+  -moz-appearance: textfield;
+  color: gray;
+}
+#menu-end {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 800px;
+  height: 500px;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+  color: #e9e9e9;
+  display: none;
+}
+#menu-end h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+#menu-end p {
+  margin: 5px;
+}
+#menu-end p:first-of-type {
+  color: rgba(233, 233, 233, 0.5);
+}
+#menu-end p:last-of-type {
+  font-size: 2em;
+}
+#menu-end button {
+  border: none;
+  box-shadow: none;
+  padding: 26px;
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #e9e9e9;
+  transition: 0.2s all;
+  outline: 0;
+  font-size: 0.8em;
+}
+#menu-end button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.2s all;
+}
+#menu-end button::-moz-focus-inner {
+  border: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

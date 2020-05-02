@@ -9,7 +9,30 @@
     <link rel="stylesheet" href="scss/main.css">
 </head>
 <body>
+    <p id="infected"></p>
+    <p id="uninfected"></p>
     <canvas id="canvas"></canvas>
+    <div id="menu">
+        <section>
+            <h1>Infection game</h1>
+            <div>
+                <label for="infected-count">Initial infected count</label>
+                <input type="number" placeholder="5" id="infected-count" min="1" max="10" value="1">
+            </div>
+            <div>
+                <label for="uninfected-count">Initial uninfected count</label>
+                <input type="number" placeholder="5" id="uninfected-count" min="20" max="200" value="50">
+                <button id="play">Play</button>
+            </div>
+        </section>
+
+    </div>
+    <div id="menu-end">
+        <h1>GAME OVER</h1>
+        <p>Your score is</p>
+        <p id="score">41628</p>
+        <button id="re-play">Play again?</button>
+    </div>
     <script type="module" src="./ts/canvas.js"></script>
 </body>
 </html>
