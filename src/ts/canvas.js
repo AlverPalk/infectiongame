@@ -1,3 +1,4 @@
+import('../scss/main.css');
 import { distance, randomIntFromRange } from "./utils.js";
 import Person from "./Person.js";
 var canvas = document.getElementById('canvas');

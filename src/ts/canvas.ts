@@ -1,3 +1,6 @@
+
+// @ts-ignore
+import('../scss/main.css');
 import { distance, randomIntFromRange } from "./utils.js";
 import Person from "./Person.js";
 
