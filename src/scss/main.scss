@@ -3,6 +3,14 @@
 $main-font__color: rgb(233, 233, 233);
 $main-font__color--lighter: rgba(233, 233, 233, .5);
 
+%dec {
+  content: '';
+  background-color: rgb(255, 127, 127);
+  width: 220px;
+  height: 4px;
+  display: block;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,6 +19,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  background: url("../img/main-bg.jpg");
 }
 
 canvas {
@@ -41,6 +50,18 @@ canvas {
     h1 {
       font-size: 3em;
       text-transform: uppercase;
+
+
+      &::after {
+        @extend %dec;
+        background-image: linear-gradient(to right, rgb(127, 127, 127), rgb(255, 127, 127));
+        margin: 0 auto;
+      }
+
+      &::before {
+        @extend %dec;
+        background-image: linear-gradient(to right, rgb(255, 127, 127), rgb(127, 127, 127));
+      }
     }
 
     div {
@@ -66,6 +87,12 @@ canvas {
         transition: .2s all;
         background-color: rgba(0, 0, 0, .7);
       }
+    }
+
+    label {
+      color: rgb(160, 160, 160);
+      text-transform: uppercase;
+      font-size: .8em;
     }
 
     input::-webkit-outer-spin-button,
@@ -110,28 +137,40 @@ canvas {
       }
     }
 
-    button {
-      border: none;
-      box-shadow: none;
-      padding: 26px;
-      position: absolute;
-      bottom: 80px;
-      right: 50px;
-      width: 400px;
-      background-color: rgba(0, 0, 0, .5);
-      color: $main-font__color;
-      transition: .2s all;
-      outline: 0;
-      font-size: .8em;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, .9);
+    div {
+      display: flex;
+      flex-direction: row;
+      height: 200px;
+      align-items: center;
+      button {
+        border: none;
+        box-shadow: none;
+        margin: 10px;
+        height: 68px;
+        width: 400px;
+        color: $main-font__color;
         transition: .2s all;
-      }
+        outline: 0;
+        font-size: .8em;
 
-      &::-moz-focus-inner {
-        border: 0;
+        &:first-of-type {
+          background-color: rgba(0, 0, 0, .3);
+        }
+
+        &:last-of-type {
+          background-color: rgba(0, 0, 0, .7);
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, .9);
+          transition: .2s all;
+        }
+
+        &::-moz-focus-inner {
+          border: 0;
+        }
       }
     }
+
   }
 }

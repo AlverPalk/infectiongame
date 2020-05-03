@@ -4,8 +4,6 @@ import { distance } from "./utils.js";
 // @ts-ignore
 import { resolveCollision } from './util-elastic-collision.js';
 
-
-
 export default class Person {
     private velocity: { x: number, y: number };
     private mass: number;

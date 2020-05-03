@@ -64,14 +64,21 @@ function init() {
         initGame();
         update();
     })
+    document.getElementById('main-menu')!.addEventListener('click', () => {
+        GC.gameState = GameState.START_SCREEN;
+        document.getElementById('menu-end')!.style.display = 'none';
+        update();
+    })
     canvas.addEventListener('mousemove', (e) => {
         updateMouseCoordinates(e);
     })
 }
 
 function initGame() {
-    // Reset person array
+    // Reset person array and zone
     GC.people = [];
+    GC.zone.x =  -200;
+    GC.zone.y =  -200;
 
     // Generate uninfected people
     generatePeople(GC.uninfected, false);
@@ -109,6 +116,10 @@ function update() {
     requestAnimationFrame(update);
     clearCanvas();
     c.clearRect(0, 0, canvas.width, canvas.height);
+    c.beginPath();
+    c.rect(0, 0, canvas.width, canvas.height);
+    c.fillStyle = 'rgba(255, 255, 255, 1)';
+    c.fill();
 
     GC.people.forEach((person) => {
         person.update();
@@ -146,6 +157,7 @@ function renderStatus() {
     c.fillStyle = 'rgba(0, 0, 0, .6)'
     c.rect(0, 0, 320, 36);
     c.fill();
+
     c.font = '14px arial';
     c.fillStyle = 'white';
     let i = 0;

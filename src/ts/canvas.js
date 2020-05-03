@@ -47,12 +47,19 @@ function init() {
         initGame();
         update();
     });
+    document.getElementById('main-menu').addEventListener('click', function () {
+        GC.gameState = GameState.START_SCREEN;
+        document.getElementById('menu-end').style.display = 'none';
+        update();
+    });
     canvas.addEventListener('mousemove', function (e) {
         updateMouseCoordinates(e);
     });
 }
 function initGame() {
     GC.people = [];
+    GC.zone.x = -200;
+    GC.zone.y = -200;
     generatePeople(GC.uninfected, false);
     generatePeople(GC.infected, true);
     GC.startTime = new Date();
@@ -80,6 +87,10 @@ function update() {
         requestAnimationFrame(update);
         clearCanvas();
         c.clearRect(0, 0, canvas.width, canvas.height);
+        c.beginPath();
+        c.rect(0, 0, canvas.width, canvas.height);
+        c.fillStyle = 'rgba(255, 255, 255, 1)';
+        c.fill();
         GC.people.forEach(function (person) {
             person.update();
         });
