@@ -1,5 +1,11 @@
 # Infection game
 
+![Preview1](./src/img/preview1.png)
+
+![Preview1](./src/img/preview2.png)
+
+![Preview1](./src/img/preview3.png)
+
 ### Kirjeldus
 Antud mängus kehastate te viirust kelle ülesandeks on nakatada kõik inimesed mänguväljal võimalikult kiirelt.
 Hetkest situatsiooni arvestades hoiavad kõik inimesed distantsi nii üksteisega, kuid eriti sinu ehk viiruse endaga.
