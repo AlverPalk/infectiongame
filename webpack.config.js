@@ -13,6 +13,10 @@ module.exports = (env, args) => {
             filename: 'js/bundle.js',
             path: path.resolve(__dirname, 'dist')
         },
+
+        devServer: {
+            contentBase: './dist'
+        },
         optimization: {
             minimize: true,
             minimizer: [
