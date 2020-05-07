@@ -30,4 +30,4 @@ Seda tehes pidage meeles, et algsete nakatute ja tervete arv on sama mis eelmise
 külastage menüüd vajutades 'Main menu' nupule.
 
 ### Kasutatud tehnoloogiad
-`HTML5` `SCSS` `ES6` `TypeScript` `Webpack` `lite-server` `NPM`
+`HTML5` `SCSS` `ES6` `TypeScript` `Webpack` `webpack-dev-server` `NPM`
